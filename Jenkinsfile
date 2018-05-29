@@ -1,5 +1,5 @@
 #!/usr/bin/env groovy
-@Library('github.com/stakater/fabric8-pipeline-library@master')
+@Library('github.com/stakater/fabric8-pipeline-library@image-makefile')
 
 def versionPrefix = ""
 try {
@@ -10,4 +10,5 @@ try {
 
 pushCustomDockerImage {
     versionPrefix = versionPrefix
+    dockerRegistryURL = "docker.io"
 }
